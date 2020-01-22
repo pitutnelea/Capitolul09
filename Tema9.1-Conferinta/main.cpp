@@ -40,7 +40,7 @@ Participant CreazaParticipant()
 
 int main()
 {
-    vector <Participant> pntParticipanti;
+    vector <Participant > *pntParticipanti;
     int nrintrodus;
     cin >> nrintrodus;
     while (nrintrodus !=0)
@@ -50,7 +50,7 @@ int main()
         cin >> nr;
         if (nr == 1)
         {
-            pntParticipanti.push_back(CreazaParticipant());
+            pntParticipanti->push_back(CreazaParticipant());
 
         }
         else if (nr == 2)
@@ -62,7 +62,7 @@ int main()
             unsigned int partGermani = 0;
             unsigned int partFrancezi = 0;
             unsigned int partAltii = 0;
-            for (Participant elem : pntParticipanti)
+            for (Participant elem : *pntParticipanti)
             {
                 switch(elem.Vorbeste())
                 {
@@ -95,6 +95,6 @@ int main()
     //poate că mai trebuie să faceți ceva (sau poate că nu ...)
     //nu mai fac delete pe heap, caci sunt declarate pe heap, dar in zona globala, iar pt zona globala nu se face delete asa-i?
     //goliți vectorul folosind metoda clear()
-    pntParticipanti.clear();
+    pntParticipanti->clear();
     return 0;
 }
