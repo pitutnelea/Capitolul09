@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1579558739 source:d:\cplusplus\proiecte\capitolul09\tema9.1-conferinta\main.cpp
+1579731597 source:d:\cplusplus\proiecte\capitolul09\tema9.1-conferinta\main.cpp
 	<iostream>
 	<stdlib.h>
 	<vector>
 	"Roman.h"
 	"Francez.h"
 	"German.h"
+	"stdlib.h"
 
 1579551643 source:d:\cplusplus\proiecte\capitolul09\tema9.1-conferinta\src\participant.cpp
 	"Participant.h"
