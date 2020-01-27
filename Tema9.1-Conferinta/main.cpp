@@ -79,6 +79,7 @@ int main()
         }
     }
 
+    //trebuie sa sterg obiectele create pe heap
     for (Participant *elem : pntParticipanti)
     {
         delete elem;
@@ -87,3 +88,54 @@ int main()
     pntParticipanti.clear();
     return 0;
 }
+
+/*Veți modela o conferință din punct de vedere al participanților. În acest scop veți defini următoarele entități:
+
+Enum-ul cu scope Limba cu elementele engleza, romana, germana și franceza.
+Clasa Participant:
+    metodă publică: Vorbeste, care nu primește nimic și returnează o valoare de tip Limba. Metoda va returna Limba::engleza
+
+Clasa Roman care moștenește clasa Participant:
+    metodă publică: reimplementează (override) metoda Vorbeste. Metoda va returna Limba::romana
+
+Clasa Francez care moștenește clasa Participant:
+    metodă publică: reimplementează (override) metoda Vorbeste. Metoda va returna Limba::franceza
+
+Clasa German care moștenește clasa Participant:
+    metodă publică: reimplementează (override) metoda Vorbeste. Metoda va returna Limba::germana
+
+În main.cpp definiți funcția Meniu care nu primește nimic și nu returnează nimic. Ea șterge ecranul și afișează meniul următor:
+    Alegeti optiunea dorita:
+    1. Adaugare participant
+    2. Afisare sumar
+    0. Iesire
+
+În main.cpp definiți funcția CreazaParticipant care nu primește nimic și returnează un pointer spre Participant.
+Funcția șterge ecranul și afișează meniul
+    Alegeti nationalitatea:
+    1. Roman
+    2. Francez
+    3. German
+    4. Alta
+și citește de la tastatură opțiunea utilizatorului. Apoi crează pe heap un obiect din clasa corespunzând opțiunii citite.
+În caz că opțiunea introdusă nu e 1, 2 sau 3 crează pe heap un obiect din clasa Participant.
+Funcția returnează pointerul către obiectul creat anterior.
+
+În funcția main definiți vectorul pntParticipanti cu elemente de tip pointer spre Participant.
+
+Apoi definiți o buclă în care să rămâneți câtă vreme nu se introduce 0. În buclă:
+    apelați funcția Meniu
+    citiți acțiunea dorită de la tastatură
+        în caz că s-a introdus 1 apelați funcția CreazaParticipant și introduceți pointerul pe care îl returnează ea în pntParticipanti.
+        în caz că s-a introdus 2
+            ștergeți ecranul
+            parcurgeți vectorul pntParticipanti și contorizați câți participanți există din fiecare din cele patru categorii (romani, germani, francezi și alții).
+            dacă există cel puțin un participant, indiferent de categorie, afișați linia "Participanti inscrisi pana acum:"
+            pentru fiecare din cele patru categorii care au cel puțin un om înscris afișați linia totalCateg Naționalitate. De exemplu dacă sunt 5 români înscriși afișați "5 Romani"
+            suspendați execuția până când utilizatorul apasă o tastă. Rezultatul ar trebui să semene cu poza anexată
+
+în caz că s-a introdus 0 ieșiți din buclă
+poate că mai trebuie să faceți ceva (sau poate că nu ...)
+goliți vectorul folosind metoda clear()
+Nota 1: un mod de a goli ecranul e apelând funcția system("CLS"); (header stdlib.h)
+Nota 2: un mod de a pauza execuția e apelând funcția system("pause");*/
