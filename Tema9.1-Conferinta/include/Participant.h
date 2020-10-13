@@ -1,7 +1,7 @@
 #ifndef PARTICIPANT_H
 #define PARTICIPANT_H
 
-enum Limba{engleza, romana, germana, franceza};
+enum class Limba{engleza, romana, germana, franceza};
 
 class Participant
 {
