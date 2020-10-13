@@ -60,9 +60,9 @@ int main()
             {
                 switch(elem->Vorbeste())
                 {
-                    case romana: partRomani +=1;break;
-                    case germana: partGermani +=1;break;
-                    case franceza: partFrancezi +=1;break;
+                    case Limba::romana: partRomani +=1;break;
+                    case Limba::germana: partGermani +=1;break;
+                    case Limba::franceza: partFrancezi +=1;break;
                     default: partAltii +=1; break;
                 }
             }
